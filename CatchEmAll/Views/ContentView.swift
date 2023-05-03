@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    let creatures = ["Pikachu", "Squirtle", "Charzard", "Snorlax"]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(creatures, id: \.self) { creature in
+                    Text(creature)
+                }
+            }
+            .listStyle(.plain)
+            .navigationTitle("Pokemon")
         }
-        .padding()
     }
 }
 
