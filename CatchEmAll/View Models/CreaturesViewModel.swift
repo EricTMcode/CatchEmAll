@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 class CreaturesViewModel: ObservableObject {
-    @Published var creaturesArray: [Result] = []
+    @Published var creaturesArray: [Creature] = []
     @Published var urlString = "https://pokeapi.co/api/v2/pokemon/"
     @Published var count = 0
     

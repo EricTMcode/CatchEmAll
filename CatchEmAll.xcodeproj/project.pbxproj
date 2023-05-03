@@ -13,7 +13,7 @@
 		07D604BA2A02859F005982B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D604B92A02859F005982B0 /* Preview Assets.xcassets */; };
 		07D604C52A028AAF005982B0 /* CreaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604C42A028AAF005982B0 /* CreaturesViewModel.swift */; };
 		07D604C92A028DAD005982B0 /* Returned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604C82A028DAD005982B0 /* Returned.swift */; };
-		07D604CB2A02906C005982B0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604CA2A02906C005982B0 /* Result.swift */; };
+		07D604CB2A02906C005982B0 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604CA2A02906C005982B0 /* Creature.swift */; };
 		07D604CD2A0291E1005982B0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604CC2A0291E1005982B0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		07D604C02A0285D6005982B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		07D604C42A028AAF005982B0 /* CreaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaturesViewModel.swift; sourceTree = "<group>"; };
 		07D604C82A028DAD005982B0 /* Returned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Returned.swift; sourceTree = "<group>"; };
-		07D604CA2A02906C005982B0 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		07D604CA2A02906C005982B0 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		07D604CC2A0291E1005982B0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				07D604C82A028DAD005982B0 /* Returned.swift */,
-				07D604CA2A02906C005982B0 /* Result.swift */,
+				07D604CA2A02906C005982B0 /* Creature.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,7 +177,7 @@
 			files = (
 				07D604C92A028DAD005982B0 /* Returned.swift in Sources */,
 				07D604CD2A0291E1005982B0 /* DetailView.swift in Sources */,
-				07D604CB2A02906C005982B0 /* Result.swift in Sources */,
+				07D604CB2A02906C005982B0 /* Creature.swift in Sources */,
 				07D604C52A028AAF005982B0 /* CreaturesViewModel.swift in Sources */,
 				07D604B52A02859E005982B0 /* CreaturesListView.swift in Sources */,
 				07D604B32A02859E005982B0 /* CatchEmAllApp.swift in Sources */,

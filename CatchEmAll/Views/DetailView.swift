@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct DetailView: View {
+    let creature: Creature
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
-            Text("Poke Name")
+            Text(creature.name.capitalized)
                 .font(Font.custom("Avenir Next Condensed", size: 60))
                 .bold()
                 .minimumScaleFactor(0.5)
@@ -66,6 +68,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(creature: Creature(name: "Bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"))
     }
 }
