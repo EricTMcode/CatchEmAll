@@ -38,9 +38,9 @@ struct DetailView: View {
                     }
                     .padding(.trailing)
                 
-                VStack {
+                VStack(alignment: .leading) {
                     HStack(alignment: . top) {
-                        Text("Height")
+                        Text("Height:")
                             .font(.title2)
                             .bold()
                             .foregroundColor(.red)
@@ -50,7 +50,7 @@ struct DetailView: View {
                             .bold()
                     }
                     HStack(alignment: . top) {
-                        Text("Weight")
+                        Text("Weight:")
                             .font(.title2)
                             .bold()
                             .foregroundColor(.red)
