@@ -11,6 +11,9 @@
 		07D604B52A02859E005982B0 /* CreaturesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604B42A02859E005982B0 /* CreaturesListView.swift */; };
 		07D604B72A02859F005982B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D604B62A02859F005982B0 /* Assets.xcassets */; };
 		07D604BA2A02859F005982B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D604B92A02859F005982B0 /* Preview Assets.xcassets */; };
+		07D604C52A028AAF005982B0 /* CreaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604C42A028AAF005982B0 /* CreaturesViewModel.swift */; };
+		07D604C92A028DAD005982B0 /* Returned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604C82A028DAD005982B0 /* Returned.swift */; };
+		07D604CB2A02906C005982B0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604CA2A02906C005982B0 /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		07D604B62A02859F005982B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D604B92A02859F005982B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07D604C02A0285D6005982B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		07D604C42A028AAF005982B0 /* CreaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaturesViewModel.swift; sourceTree = "<group>"; };
+		07D604C82A028DAD005982B0 /* Returned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Returned.swift; sourceTree = "<group>"; };
+		07D604CA2A02906C005982B0 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,8 @@
 		07D604C12A0285EA005982B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				07D604C82A028DAD005982B0 /* Returned.swift */,
+				07D604CA2A02906C005982B0 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -81,6 +89,7 @@
 		07D604C22A0285F0005982B0 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				07D604C42A028AAF005982B0 /* CreaturesViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -163,6 +172,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D604C92A028DAD005982B0 /* Returned.swift in Sources */,
+				07D604CB2A02906C005982B0 /* Result.swift in Sources */,
+				07D604C52A028AAF005982B0 /* CreaturesViewModel.swift in Sources */,
 				07D604B52A02859E005982B0 /* CreaturesListView.swift in Sources */,
 				07D604B32A02859E005982B0 /* CatchEmAllApp.swift in Sources */,
 			);
