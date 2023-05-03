@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CreaturesListView.swift
 //  CatchEmAll
 //
 //  Created by Eric on 03/05/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CreaturesListView: View {
     let creatures = ["Pikachu", "Squirtle", "Charzard", "Snorlax"]
     
     var body: some View {
@@ -23,8 +23,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CreaturesListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CreaturesListView()
     }
 }
