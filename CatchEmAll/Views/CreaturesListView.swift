@@ -12,10 +12,8 @@ struct CreaturesListView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(creatures, id: \.self) { creature in
-                    Text(creature)
-                }
+            List(creatures, id: \.self) { creature in
+                Text(creature)
             }
             .listStyle(.plain)
             .navigationTitle("Pokemon")
