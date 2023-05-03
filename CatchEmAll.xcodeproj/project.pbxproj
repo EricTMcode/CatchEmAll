@@ -14,6 +14,7 @@
 		07D604C52A028AAF005982B0 /* CreaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604C42A028AAF005982B0 /* CreaturesViewModel.swift */; };
 		07D604C92A028DAD005982B0 /* Returned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604C82A028DAD005982B0 /* Returned.swift */; };
 		07D604CB2A02906C005982B0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604CA2A02906C005982B0 /* Result.swift */; };
+		07D604CD2A0291E1005982B0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D604CC2A0291E1005982B0 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		07D604C42A028AAF005982B0 /* CreaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreaturesViewModel.swift; sourceTree = "<group>"; };
 		07D604C82A028DAD005982B0 /* Returned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Returned.swift; sourceTree = "<group>"; };
 		07D604CA2A02906C005982B0 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		07D604CC2A0291E1005982B0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				07D604B42A02859E005982B0 /* CreaturesListView.swift */,
+				07D604CC2A0291E1005982B0 /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D604C92A028DAD005982B0 /* Returned.swift in Sources */,
+				07D604CD2A0291E1005982B0 /* DetailView.swift in Sources */,
 				07D604CB2A02906C005982B0 /* Result.swift in Sources */,
 				07D604C52A028AAF005982B0 /* CreaturesViewModel.swift in Sources */,
 				07D604B52A02859E005982B0 /* CreaturesListView.swift in Sources */,

@@ -14,6 +14,7 @@ struct CreaturesListView: View {
         NavigationStack {
             List(creaturesVM.creaturesArray, id: \.self) { creature in
                 Text(creature.name)
+                    .font(.title2)
             }
             .listStyle(.plain)
             .navigationTitle("Pokemon")
