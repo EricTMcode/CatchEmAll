@@ -1,5 +1,5 @@
 //
-//  CreaturesViewModel.swift
+//  CreatureDetailViewModel.swift
 //  CatchEmAll
 //
 //  Created by Eric on 03/05/2023.
@@ -8,10 +8,25 @@
 import Foundation
 
 @MainActor
-class CreaturesViewModel: ObservableObject {
-    @Published var creaturesArray: [Creature] = []
-    @Published var urlString = "https://pokeapi.co/api/v2/pokemon/"
-    @Published var count = 0
+class CreatureDetailViewModel: ObservableObject {
+    private struct Returned: Codable {
+        var height: Double
+        var weight: Double
+        var sprites: Sprite
+    }
+    
+    struct Sprite: Codable {
+        var frontDefault: String
+        
+        enum CodingKeys: String, CodingKey {
+            case frontDefault = "front_default"
+        }
+    }
+ 
+    var urlString = ""
+    @Published var height = 0.0
+    @Published var weight = 0.0
+    @Published var imageURL = ""
     
     func getData() async {
         print("🕸️ We are accessing the url \(urlString)")
@@ -28,9 +43,9 @@ class CreaturesViewModel: ObservableObject {
                 print("😡 JSON ERROR: Could not decode returned JSON data")
                 return
             }
-            self.count = returned.count
-            self.urlString = returned.next
-            self.creaturesArray = returned.results
+            self.height = returned.height
+            self.weight = returned.weight
+            self.imageURL = returned.sprites.frontDefault
         } catch {
             print("😡 ERROR: Could not use URL at \(urlString) to get data and response")
         }

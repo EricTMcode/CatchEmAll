@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    @StateObject var creatureDetailVM = CreatureDetailViewModel()
     let creature: Creature
     
     var body: some View {
@@ -44,7 +45,7 @@ struct DetailView: View {
                             .bold()
                             .foregroundColor(.red)
                         
-                        Text("999.9")
+                        Text(String(format: "%.1f", creatureDetailVM.height))
                             .font(.largeTitle)
                             .bold()
                     }
@@ -54,7 +55,7 @@ struct DetailView: View {
                             .bold()
                             .foregroundColor(.red)
                         
-                        Text("999.9")
+                        Text(String(format: "%.1f", creatureDetailVM.weight))
                             .font(.largeTitle)
                             .bold()
                     }
@@ -63,6 +64,10 @@ struct DetailView: View {
             Spacer()
         }
         .padding()
+        .task {
+            creatureDetailVM.urlString = creature.url
+            await creatureDetailVM.getData()
+        }
     }
 }
 
