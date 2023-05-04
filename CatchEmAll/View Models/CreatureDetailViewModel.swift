@@ -17,12 +17,31 @@ class CreatureDetailViewModel: ObservableObject {
     
     struct Sprite: Codable {
         var frontDefault: String?
+        var other: Other
+        
+        enum CodingKeys: String, CodingKey {
+            case frontDefault = "front_default"
+            case other
+        }
+    }
+    
+    struct Other: Codable {
+        var officialArtwork: OfficialArtwork
+    
+        enum CodingKeys: String, CodingKey {
+            case officialArtwork = "official-artwork"
+        }
+    }
+    
+    struct OfficialArtwork: Codable {
+        var frontDefault: String
         
         enum CodingKeys: String, CodingKey {
             case frontDefault = "front_default"
         }
     }
- 
+    
+    
     var urlString = ""
     @Published var height = 0.0
     @Published var weight = 0.0
@@ -45,7 +64,7 @@ class CreatureDetailViewModel: ObservableObject {
             }
             self.height = returned.height
             self.weight = returned.weight
-            self.imageURL = returned.sprites.frontDefault ?? ""
+            self.imageURL = returned.sprites.other.officialArtwork.frontDefault
         } catch {
             print("😡 ERROR: Could not use URL at \(urlString) to get data and response")
         }
