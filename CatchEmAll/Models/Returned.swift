@@ -9,6 +9,6 @@ import Foundation
 
 struct Returned: Codable {
     var count: Int
-    var next: String
+    var next: String?
     var results: [Creature]
 }
