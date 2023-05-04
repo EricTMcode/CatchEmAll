@@ -12,16 +12,21 @@ struct CreaturesListView: View {
     
     var body: some View {
         NavigationStack {
-            List(creaturesVM.creaturesArray, id: \.self) { creature in
+            List(0..<creaturesVM.creaturesArray.count, id: \.self) { index in
                 NavigationLink {
-                    DetailView(creature: creature)
+                    DetailView(creature: creaturesVM.creaturesArray[index])
                 } label: {
-                    Text(creature.name.capitalized)
+                    Text("\(index+1). \(creaturesVM.creaturesArray[index].name.capitalized)")
                         .font(.title2)
                 }
             }
             .listStyle(.plain)
             .navigationTitle("Pokemon")
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    Text("\(creaturesVM.creaturesArray.count) of \(creaturesVM.count) creatures")
+                }
+            }
         }
         .task {
             await creaturesVM.getData()

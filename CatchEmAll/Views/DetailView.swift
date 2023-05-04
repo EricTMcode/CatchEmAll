@@ -69,6 +69,7 @@ struct DetailView: View {
             }
             Spacer()
         }
+        .navigationBarTitleDisplayMode(.inline)
         .padding()
         .task {
             creatureDetailVM.urlString = creature.url
