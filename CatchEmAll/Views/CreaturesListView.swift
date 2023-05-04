@@ -38,7 +38,7 @@ struct CreaturesListView: View {
                     ToolbarItem(placement: .bottomBar) {
                         Button("Load All") {
                             Task {
-                               await creaturesVM.loadAll()
+                                await creaturesVM.loadAll()
                             }
                         }
                     }
