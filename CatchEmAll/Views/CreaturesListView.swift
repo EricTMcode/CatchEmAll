@@ -13,11 +13,22 @@ struct CreaturesListView: View {
     var body: some View {
         NavigationStack {
             List(0..<creaturesVM.creaturesArray.count, id: \.self) { index in
-                NavigationLink {
-                    DetailView(creature: creaturesVM.creaturesArray[index])
-                } label: {
-                    Text("\(index+1). \(creaturesVM.creaturesArray[index].name.capitalized)")
-                        .font(.title2)
+                LazyVStack {
+                    NavigationLink {
+                        DetailView(creature: creaturesVM.creaturesArray[index])
+                    } label: {
+                        Text("\(index+1). \(creaturesVM.creaturesArray[index].name.capitalized)")
+                            .font(.title2)
+                    }
+                }
+                .onAppear {
+                    if let lastCreature = creaturesVM.creaturesArray.last {
+                        if creaturesVM.creaturesArray[index].name == lastCreature.name && creaturesVM.urlString.hasPrefix("http") {
+                            Task {
+                                await creaturesVM.getData()
+                            }
+                        }
+                    }
                 }
             }
             .listStyle(.plain)
